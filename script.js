@@ -48,7 +48,7 @@ window.onload = () => {
 
                     const icon = document.createElement('a-image');
                     icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
-                    icon.setAttribute('title', place.name);
+                    icon.setAttribute('name', place.name);
                     icon.setAttribute('src', 'assets/map-marker.png');
 
                     // for debug purposes, just show in a bigger scale, otherwise I have to personally go on places...
@@ -70,7 +70,7 @@ window.onload = () => {
                         ev.stopPropagation();
                         ev.preventDefault();
 
-                        const name = ev.target.getAttribute('title');
+                        const name = ev.target.getAttribute('name');
                         const el = ev.detail.intersection && ev.detail.intersection.object.el;
 
                         if (el && el === ev.target) {
