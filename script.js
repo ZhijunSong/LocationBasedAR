@@ -70,7 +70,7 @@ window.onload = () => {
                         ev.stopPropagation();
                         ev.preventDefault();
 
-                        const name = ev.target.getAttribute('name');
+                        const name = ev.target.getAttribute('title');
                         const el = ev.detail.intersection && ev.detail.intersection.object.el;
 
                         if (el && el === ev.target) {
